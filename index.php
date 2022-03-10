@@ -8,20 +8,20 @@
   <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
 
   <!-- Connect DB -->
-  <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+    <?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, "quanlythuvien");
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, "quanlythuvien");
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully<br>";
-?>
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+  echo "Connected successfully<br>";
+  ?>
 <!-- Connect DB -->
 
 <!-- Insert DB -->
@@ -47,12 +47,12 @@ echo "Connected successfully<br>";
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="testName">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="InputEmail">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <input type="password" class="form-control" id="exampleInputPassword1" name="OutputPassword">
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -63,13 +63,23 @@ echo "Connected successfully<br>";
 <!-- Check account -->
 <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      // collect value of input field
-      $name = htmlspecialchars($_REQUEST['testName']);
-      if (empty($name)) {
-          echo "Name is empty";
-      } else {
-          echo $name;
+
+    $sql = "SELECT * FROM quantri";
+    $result = $conn->query($sql);
+    // collect value of input field
+    $name = $_POST['InputEmail'];
+    $password = $_POST['OutputPassword'];
+    $checkLogin = false;
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+        if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
+          echo "Dang nhap thanh cong";
+          $checkLogin=true;
+          break;
+        }
       }
+    }
+    if($checkLogin==false) {echo "Sai tai khoan hoac mat khau";}
   }
 ?>
 <!-- Check account -->

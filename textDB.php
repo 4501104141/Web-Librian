@@ -62,3 +62,14 @@
             echo "Error creating table: " . $conn->error;
         }
     ?>
+    <?php 
+        $sql = "CREATE TABLE quantri (
+        TaiKhoan VARCHAR(100),
+        MatKhau VARCHAR(100)
+        )";
+        if ($conn->query($sql) === TRUE) {
+            echo "Table quantri created successfully<br>";
+        } else {
+            echo "Error creating table: " . $conn->error;
+        }
+    ?>
