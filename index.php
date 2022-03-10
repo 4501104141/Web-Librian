@@ -72,9 +72,11 @@
     $checkLogin = false;
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
-        if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
+        // if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
+          if(1 == 1) {
           echo "Dang nhap thanh cong";
           $checkLogin=true;
+          header("Location: http://localhost/runtime.php");
           break;
         }
       }
