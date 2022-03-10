@@ -44,10 +44,10 @@ echo "Connected successfully<br>";
 <!-- Show DB -->
 </head>
 <body>
-<form>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="testName">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
@@ -61,20 +61,17 @@ echo "Connected successfully<br>";
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <!-- Check account -->
-  <?php 
-    $sql = "SELECT MaSach,	TenSach, TacGia,	NhaXuatBan,	NgayPhatHanh FROM sach";
-    $result = $conn->query($sql);
-    if ($result->num_rows > 0) {
-      // output data of each row
-      while($row = $result->fetch_assoc()) {
-        
-          echo "id: " . $row["MaSach"]. " - Name: " . $row["TenSach"]. " " . $row["TacGia"]. "<br>";
-        
+<?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // collect value of input field
+      $name = htmlspecialchars($_REQUEST['testName']);
+      if (empty($name)) {
+          echo "Name is empty";
+      } else {
+          echo $name;
       }
-    } else {
-      echo "0 results";
-    }
-  ?>
+  }
+?>
 <!-- Check account -->
   <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </body>
