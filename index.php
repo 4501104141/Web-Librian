@@ -44,7 +44,7 @@
 <!-- Show DB -->
 </head>
 <body>
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<form method="post">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="InputEmail">
@@ -58,8 +58,15 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="reset" class="btn btn-primary" value="Reset">Reset</button>
 </form>
+<!-- Link Sign up -->
+<form>
+  <button type="submit" class="btn btn-primary" formaction="http://localhost/SignUp.php">SignUp</button>
+</form>
+<!-- Link SIgn up -->
+
 <!-- Check account -->
 <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -72,11 +79,10 @@
     $checkLogin = false;
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()) {
-        // if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
-          if(1 == 1) {
+         if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
           echo "Dang nhap thanh cong";
           $checkLogin=true;
-          header("Location: http://localhost/runtime.php");
+          header("Location: http://localhost/homepage.php");
           break;
         }
       }
