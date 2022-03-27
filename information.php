@@ -7,148 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    <p style="">THÔNG TIN ĐẶT CHỖ</p>
-    <p>Họ và tên: 
-        <?php
+    <?php 
+        function checkInput1($name) {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-                $name = $_POST['nameCustomer'];
                 if (empty($name)) {
-                    echo "Name is empty";
+                    header("Location: http://localhost/homepage.php");
                 } else {
                     echo $name;
                 }
             }else {echo "TAI SAO";}
-        ?>
-        <br>
+            // Begin so hard :"3
+        }
+    ?>
+    <p>THÔNG TIN ĐẶT CHỖ</p>
+    <p>Họ và tên: 
+        <?php checkInput1($_POST['nameCustomer']);?>
+    <br>
     </p>
     <p>Độ tuổi: 
-    <?php 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['age'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+        <?php checkInput1($_POST['age']); ?>
     / Giới tính:
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['sex'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+        <?php checkInput1($_POST['sex']);?>
     <br></p>
     <p>Địa chỉ:
-        <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-                $name = $_POST['address'];
-                if (empty($name)) {
-                    echo "Name is empty";
-                } else {
-                    echo $name;
-                }
-            }else {echo "TAI SAO";}
-        ?>
+        <?php checkInput1($_POST['address']); ?>
     <br></p>
     <h3>Thông tin đặt chỗ</h3>
     <p>Số khách tham dự bữa tiệc
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // collect value of input field
-        $name = $_POST['numberCustomer'];
-        if (empty($name)) {
-            echo "Name is empty";
-        } else {
-            echo $name;
-        }
-        }
-    ?>
+        <?php checkInput1($_POST['numberCustomer']);?>
     - Ngày đặt tiệc: 
-    <?php 
-        // collect value of input field
-        $name = $_POST['date'];
-        if (empty($name)) {
-            echo "Name is empty";
-        } else {
-            echo $name;
-        }
-    ?>
+    <?php checkInput1($_POST['date']); ?>
     </p>
     <p>Loại tiệc:
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['categoriesParty'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+    <?php checkInput1($_POST['categoriesParty']);?>
     </p>
     <br>
     <p>Địa điểm:
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['addressParty'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+    <?php checkInput1($_POST['addressParty']);?>
     </p>
     <p>Các yêu cầu kèm theo:
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['message'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+        <?php checkInput1($_POST['message'])?>
     </p>
     <p>Quý khách biết chúng tôi qua:
-        <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // collect value of input field
-                $name = $_POST['knowTo'];
-                if (empty($name)) {
-                    echo "Name is empty";
-                } else {
-                    echo $name;
-                }
-            }else {echo "TAI SAO";}
-        ?>
+        <?php checkInput1($_POST['knowTo']); ?>
     </p>
     <p>Chúng tôi đã nhận được thông tin đặt chỗ của quý khách vào lúc: 
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // collect value of input field
-            $name = $_POST['date'];
-            if (empty($name)) {
-                echo "Name is empty";
-            } else {
-                echo $name;
-            }
-        }else {echo "TAI SAO";}
-    ?>
+    <?php checkInput1($_POST['date']);?>
     </p>
 </body>
 </html>
