@@ -45,7 +45,7 @@
         $name = $_POST['InputSignUpEmail'];
         $password = $_POST['InputSignUpPassword'];
         if(empty($name)===true) {
-            echo "NGU";
+            echo "Moi ban nhap Email";
         }else {
             // Xem co ton tai hay khong
             $sql = "SELECT * FROM quantri";

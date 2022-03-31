@@ -87,7 +87,7 @@
         }
       }
     }
-    if($checkLogin==false) {echo "Sai tai khoan hoac mat khau";}
+    if($checkLogin===false) {echo "Sai tai khoan hoac mat khau";}
   }
 ?>
 <!-- Check account -->
