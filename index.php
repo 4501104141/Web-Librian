@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="storge.css">
 
   <!-- Connect DB -->
-    <?php
+  <?php
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -61,11 +62,16 @@
   <button type="submit" class="btn btn-primary">Sign in</button>
   <button type="reset" class="btn btn-primary" value="Reset">Reset</button>
 </form>
-<!-- Link Sign up -->
+<!--Sign up-->
 <form>
-  <button type="submit" class="btn btn-primary" formaction="http://localhost/SignUp.php">SignUp</button>
+  <button type="submit" class="btn btn-primary" style="margin-top: 15px;" formaction="http://localhost/SignUp.php">SignUp</button>
 </form>
-<!-- Link SIgn up -->
+
+<!-- Test in here-->
+
+<!-- Test in here-->
+
+<!--Sign up-->
 
 <!-- Check account -->
 <?php
@@ -82,7 +88,7 @@
          if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
           echo "Dang nhap thanh cong";
           $checkLogin=true;
-          header("Location: http://localhost/homepage.php");
+          header("Location: http://localhost/HomePage.php");
           break;
         }
       }
