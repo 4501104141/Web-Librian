@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="storge.css">
+    <link rel="stylesheet" href="StorgeCSS\HomePage.css">
 </head>
 <body>
 <div class="header">
-  <h1>My Website</h1>
-  <p>Resize the browser window to see the effect.</p>
+  <h1>THƯ VIỆN SÁCH</h1>
+  <p>Good morning.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" style="float:right">Link</a>
+  <a href="#">Trang chủ</a>
+  <a href="#">Sách</a>
+  <a href="#">Post</a>
+  <a href="#" style="float:right">Giỏ sách</a>
+  <a href="#" style="float:right">Thông tin cá nhân</a>
 </div>
 
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
+      <h2>CHỦ ĐỀ</h2>
       <h5>Title description, Dec 7, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
