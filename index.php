@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="index.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="StorgeCSS\index.css">
 
   <!-- Connect DB -->
   <?php
@@ -21,58 +21,27 @@
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }
-  echo "Connected successfully<br>";
   ?>
 <!-- Connect DB -->
 
-<!-- Insert DB -->
-<!-- Insert DB -->
-
-<!-- Show DB -->
-  <?php
-  $sql = "SELECT MaSach,	TenSach, TacGia,	NhaXuatBan,	NgayPhatHanh FROM sach";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "id: " . $row["MaSach"]. " - Name: " . $row["TenSach"]. " " . $row["TacGia"]. "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
-  ?>
-<!-- Show DB -->
 </head>
-<body>
-<form method="post">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="InputEmail">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="OutputPassword">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-  <button type="reset" class="btn btn-primary" value="Reset">Reset</button>
-</form>
+<body style="text-align: center; margin-top: 300px;">
+<div>
+  <form method="POST">
+    <label for="fname">Địa chỉ email</label>
+    <input type="email" id="exampleInputEmail1" name="InputEmail" placeholder="Email..">
+    <label for="lname">Mật Khẩu</label>
+    <input type="password" id="exampleInputPassword1" name="OutputPassword" placeholder="Password..">
+    
+    <input type="submit" value="Đăng nhập">
+    <input type="reset" value="Làm mới">
+  </form>
+</div>
 <!--Sign up-->
 <form>
-  <button type="submit" class="btn btn-primary" style="margin-top: 15px;" formaction="http://localhost/SignUp.php">SignUp</button>
+  <button type="submit" style="margin-top: 15px;" formaction="http://localhost/SignUp.php">Đăng kí</button>
 </form>
-
-<!-- Test in here-->
-
-<!-- Test in here-->
-
 <!--Sign up-->
-
 <!-- Check account -->
 <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -93,8 +62,9 @@
         }
       }
     }
-    if($checkLogin===false) {echo "Sai tai khoan hoac mat khau";}
+    if($checkLogin===false) {echo "<p style='color: white;'>Sai tai khoan hoac mat khau</p>";}
   }
+  $conn->close();
 ?>
 <!-- Check account -->
   <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>

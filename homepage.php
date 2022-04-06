@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="StorgeCSS\HomePage.css">
+    <link rel="stylesheet" href="HomePage.css">
 </head>
 <body>
 <div class="header">
@@ -14,8 +14,8 @@
 </div>
 
 <div class="topnav">
-  <a href="#">Trang chủ</a>
-  <a href="#">Sách</a>
+  <a href="HomePage.php">Trang chủ</a>
+  <a href="ProductBook.php">Sách</a>
   <a href="#">Post</a>
   <a href="#" style="float:right">Giỏ sách</a>
   <a href="#" style="float:right">Thông tin cá nhân</a>
@@ -35,14 +35,14 @@
       <h5>Title description, Sep 2, 2017</h5>
       <div class="fakeimg" style="height:200px;">Image</div>
       <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <p>Some text..</p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>About Me</h2>
       <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <p>Some text..</p>
     </div>
     <div class="card">
       <h3>Popular Post</h3>
