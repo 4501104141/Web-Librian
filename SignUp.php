@@ -5,25 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="SignUp.css">
 </head>
 <body>
 <!-- Label -->
     <form method="post">
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="InputSignUpEmail">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <h2>Sign Up</h2>
+        <p id ="email">
+            <label for="exampleInputEmail1" class="form-label">Email address: </label>
+            <input type="email" class="form-control-email" id="exampleInputEmail1" aria-describedby="emailHelp" name="InputSignUpEmail">
+        </p>
+    
+        <p id="password">
+            <label for="exampleInputPassword1" class="form-label">Password: </label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="InputSignUpPassword"><br>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </p>
+    
+        <p>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label><br>
+        </p>
+        
+        
+        
+            <button class = "btnSignIn" type="submit" class="btn btn-primary">Sign in</button>
+            &emsp;&emsp;
+            <button class = "btnReset" type="reset" class="btn btn-primary" value="Reset">Reset</button>
+            
+        
+            
+        
     </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" name="InputSignUpPassword">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
-    <button type="reset" class="btn btn-primary" value="Reset">Reset</button>
     </form>
 <!-- Label -->
 <!-- Insert user -->
