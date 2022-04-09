@@ -38,9 +38,11 @@
   </form>
 </div>
 <!--Sign up-->
-<form>
-  <button type="submit" style="margin-top: 15px;" formaction="http://localhost/SignUp.php">Đăng kí</button>
-</form>
+<div>
+    <form>
+      <button type="submit" style="margin-top: 15px;" formaction="http://localhost/Web-Librian/SignUp.php">Đăng kí</button>
+    </form>
+</div>
 <!--Sign up-->
 <!-- Check account -->
 <?php
@@ -57,7 +59,7 @@
          if ($name===$row["TaiKhoan"] && $password === $row["MatKhau"]) {
           echo "Dang nhap thanh cong";
           $checkLogin=true;
-          header("Location: http://localhost/HomePage.php");
+          header("Location: http://localhost/Web-Librian/HomePage.php");
           break;
         }
       }

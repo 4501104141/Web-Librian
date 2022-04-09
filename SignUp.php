@@ -70,7 +70,7 @@
                 
                 if ($conn->query($sql) === TRUE) {
                 echo "Dang ky thanh cong";
-                header("Location: http://localhost/index.php");
+                header("Location: http://localhost/Web-Librian/index.php");
                 } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
                 }
