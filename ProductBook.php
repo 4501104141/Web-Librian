@@ -10,14 +10,14 @@
 <body>
 <div class="header">
   <h1>THƯ VIỆN SÁCH</h1>
-  <p>Good morning.</p>
 </div>
 <div class="topnav">
   <a href="HomePage.php">Trang chủ</a>
   <a href="ProductBook.php">Sách</a>
   <a href="Post.php">Post</a>
-  <a href="Cart.php" style="float:right">Giỏ sách</a>
-  <a href="Profile.php" style="float:right">Thông tin cá nhân</a>
+  <a href="Logout.php" style="float: inline-end;">Log Out</a>
+  <a href="Cart.php" style="float: inline-end;">Giỏ sách</a>
+  <a href="Profile.php" style="float: inline-end;">Thông tin cá nhân</a>
 </div>
 <div style="margin-top: 50px;">
 <!-- Tranning Insert Book :"3 -->

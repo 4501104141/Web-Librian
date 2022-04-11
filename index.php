@@ -40,7 +40,7 @@
 <!--Sign up-->
 <div>
   <form>
-    <button type="submit" style="margin-top: 15px;" formaction="http://localhost/Web-Librian/SignUp.php">Đăng kí</button>
+    <button type="submit" style="margin-top: 15px;" formaction="http://localhost/Web-Librian/Post.php">Đăng kí</button>
   </form>
 </div>
 <!--Sign up-->

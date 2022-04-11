@@ -16,8 +16,10 @@
   <a href="HomePage.php">Trang chủ</a>
   <a href="ProductBook.php">Sách</a>
   <a href="Post.php">Post</a>
-  <a href="Cart.php" style="float:right">Giỏ sách</a>
-  <a href="Profile.php" style="float:right">Thông tin cá nhân</a>
+  <a href="Logout.php" style="float: inline-end;">Log Out</a>
+  <a href="Cart.php" style="float: inline-end;">Giỏ sách</a>
+  <a href="Profile.php" style="float: inline-end;">Thông tin cá nhân</a>
+  
 </div>
 
 <div class="row">
@@ -57,6 +59,9 @@
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <a className="text-lg italic hover:underline" target="_blank">
+    © 2022 Librian
+  </a>
+    - All Rights Reserved
 </div>
 </html>
