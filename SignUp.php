@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="SignUp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Label -->
@@ -23,20 +24,13 @@
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
         </p>
     
-        <p>
+        <p id = "checkBox">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label><br>
         </p>
-        
-        
-        
             <button class = "btnSignIn" type="submit" class="btn btn-primary">Sign in</button>
             &emsp;&emsp;
-            <button class = "btnReset" type="reset" class="btn btn-primary" value="Reset">Reset</button>
-            
-        
-            
-        
+            <button class = "btnReset" type="reset" class="btn btn-primary" value="Reset">Reset</button>   
     </div>
     </form>
 <!-- Label -->
@@ -59,7 +53,7 @@
         $name = $_POST['InputSignUpEmail'];
         $password = $_POST['InputSignUpPassword'];
         if(empty($name)===true) {
-            echo "Moi ban nhap Email";
+            echo "<p style='color: black text-align: center;'>Sai tai khoan hoac mat khau</p>";
         }else {
             // Xem co ton tai hay khong
             $sql = "SELECT * FROM quantri";

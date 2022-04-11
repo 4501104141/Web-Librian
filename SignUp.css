@@ -16,14 +16,20 @@
 
 #password{
     margin-left: 2px;
+    font-family: 'Nunito';
+}
+
+#emailHelp{
+    margin-top: 30px;
+    font-family: 'Nunito';
 }
 
 .form-control{
     margin-left: 29px;
 }
 
-.btnSignIn {
-    margin-top: 30px;
+/* .btnSignIn {
+    
     background-color: greenyellow;
     color:black;
     text-decoration: none;
@@ -33,16 +39,33 @@
     font-size: 20px;
     border-radius: 8px;
     border-color: black;
+} */
+
+.btnReset, .btnSignIn{
+    margin-top: 30px;
+    background-color: #333;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 8px;
+    border-color: black;
+    transition-duration: 0.2s;
 }
 
-.btnReset{
-    background-color: greenyellow;
+.btnReset:hover{
+    background-color: whitesmoke;
     color:black;
-    text-decoration: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    border-radius: 8px;
-    border-color: black;
 }
+.btnSignIn:hover{
+    background-color: whitesmoke;
+    color:black;
+}
+
+h2, #email, .form-check-lable, #checkBox{
+    font-family: 'Nunito', sans-serif;
+    
+}
+

@@ -64,7 +64,7 @@
         }
       }
     }
-    if($checkLogin===false) {echo "<p style='color: white;'>Sai tai khoan hoac mat khau</p>";}
+    if($checkLogin===false) {echo "<p style>Sai tai khoan hoac mat khau</p>";}
   }
   $conn->close();
 ?>
