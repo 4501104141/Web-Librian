@@ -53,7 +53,7 @@
         $name = $_POST['InputSignUpEmail'];
         $password = $_POST['InputSignUpPassword'];
         if(empty($name)===true) {
-            echo "<p style='color: black text-align: center;'>Sai tai khoan hoac mat khau</p>";
+            echo "<p style='color: red; text-align: center;'>Sai tai khoan hoac mat khau</p>";
         }else {
             // Xem co ton tai hay khong
             $sql = "SELECT * FROM quantri";
