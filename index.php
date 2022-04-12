@@ -38,11 +38,9 @@
   </form>
 </div>
 <!--Sign up-->
-<div>
     <form>
       <button type="submit" style="margin-top: 15px;" formaction="http://localhost/Web-Librian/SignUp.php">Đăng kí</button>
     </form>
-</div>
 <!--Sign up-->
 <!-- Check account -->
 <?php
